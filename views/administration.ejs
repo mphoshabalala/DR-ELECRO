@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Uracline Space | Admin</title>
+</head>
+<body class="body" id="admin-body">
+    <h1>Administration: For authorized user only</h1>
+    <div class="table-container">
+
+        <form class="admin-form"  method="POST" action="/additem">
+            <table>
+              <tr>
+                <td><input type="text" name="item_name" placeholder="Enter name" required></td>
+                <td><input type="text" name="item_description" placeholder="Description" required></td>
+                <td><input type="text" name="item_price" placeholder="Enter price" required></td>
+                <td><button id="admin-btn" class="btn-secondary" type="submit">Submit</button></td>
+
+              </tr>
+            </table>
+            
+          </form>
+        <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(results.length > 0) {%>
+                <% results.forEach( result => {%>
+                <tr>
+                    <td><%=result.item_id %></td>
+                    <td><%=result.item_name %></td>
+                    <td><%=result.item_description %></td>
+                    <td><%=result.item_price %></td>
+                </tr>
+                <%})%>
+              <%}%>
+            </tbody>
+          </table>
+
+    </div>
+</body>
+</html>

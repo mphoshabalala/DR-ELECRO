@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Uracline Space | Login</title>
+</head>
+<body class="body form-body" id="login-body">
+    <form class="stand-alone-form" action="/login_auth" method="POST">
+        <h1>Login</h1>
+        <img src="images/user.png" class="icon" alt="">
+        <input  required placeholder="Gmail..." type="gmail" name="customer_gmail" id="">
+        <input  required placeholder="Password..." type="password" name="customer_password" id="">
+        <button type="submit" class="btn-primary">Login</button>
+        <div class="forgot-details">
+            <ul>
+                <li><a href="sign-in">Create Account</a></li>
+                <p>/</p>
+                <li><a href="#">Forgot Login Details</a></li>
+            </ul>
+        </div>
+    </form>
+</body>
+</html>

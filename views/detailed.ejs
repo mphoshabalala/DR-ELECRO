@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Uracline Space | Item</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body id="item-body" class="body">
+    <div class="container">
+        
+        <header class="header" id="item-description-header">
+                <h1>DR. Elecro</h1>
+                <div>
+                    <li><a class="main-cart" href="/detailed-cart">
+                            <p class="number-of-items"></p>
+                        
+                        <img  id="cart" src="images/cart.png" alt="">
+                    </a></li> 
+                    
+                </div>
+        </header>
+
+       <section id="item-section">
+        <div id="item-gallery">
+            <img src="" id="arrow-up" alt="">
+            <img src="" id="main-item" alt="">
+            <img src="" id="arrow-down" alt="">
+
+        </div>
+
+
+        <section class="item-details">
+            <img src="" alt="">
+            <% if(result.length > 0) {%>
+                <% result.forEach( result => {%>
+                    <div class="card-description">
+                        <h3 class="item-name" id="name<%=result.item_id%>"><%=result.item_name%></h3>
+                        <p  class="item-description" id="description<%=result.item_id%>"><%=result.item_description%></p>
+                        <p  class="item-price" id="price<%=result.item_id%>">R<%=result.item_price%>.00</p>
+                        <button id="cart-button" class="btn-quaternary" type="submit"><span style="font-kerning:unset;">+</span>Add to cart</button>
+                    </div>
+                <%})%>
+            <%}%>
+        </section>
+       </section>
+        <section class="main-reviews">
+            <h1>Reviews</h1>
+            <div class="current-user-review">
+                <h3>Rate this product and share your thoughts</h3>
+                <form class="re-section" action="/submit-ratings" method="POST">
+                    <div class="stars">
+                        <input type="radio" name="rate" id="rate-1" value=1>
+                        <label for="rate-1" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2" value=2>
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3" value=3>
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4" value=4>
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-5" value=5>
+                        <label for="rate-5" class="fas fa-star"></label>
+                    </div>
+                    <div class="submission">
+                        <textarea name="comment" placeholder="Comment here" id="comment-textarea" cols="15" rows="5" class="add-comment input"></textarea>
+                        <button  class="btn-quaternary" type="submit">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="see-other-user-reviews">
+                <h3>See what other people say about this product</h3>
+                <div class="other-review">
+                    <div class="other-user-comment">
+                        <div class="commentor">
+                            <img src="images/user.png" alt="">
+                            <h4>Lepampana</h4>
+                        </div>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed voluptatibus quo, voluptas minima sit adipisci
+                           dolorum sunt, omnis reiciendis itaque totam, quam ratione fuga autem consequatur corporis facere. Molestias dicta adipisci explicabo
+                           dolore laboriosam soluta beatae inventore itaque dolores nobis ipsum fuga libero, pariatur a reprehenderit voluptates nihil.
+                           Doloremque, reprehenderit.</p>
+                        </div>
+                
+           
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

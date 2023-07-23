@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Uracline Space </title>
+</head>
+<body class="body" id="index-body">
+    <div class="main-container">
+        <header class="header">
+                <h1><li>DR. Elecro</li></h1>
+                <div>
+                    <li><a href="#"><img  id="menu" src="images/menu.png" alt=""></a></li>
+                    <li class="list-items"><a id="login" href="#">Login</a></li>
+                    <li class="list-items"><a  id="sign-up" href="#">Sign Up</a></li>
+                    
+                </div> 
+        </header>
+
+        <main class="main-body">
+            <div class="container">
+                <div class="main-div">
+                    <form class="search-bar">
+                        <input type="search" id="search" placeholder="Search...">
+                        <button class="btn-tertiary">Search</button>
+                    </form>
+                    <!-- <img src="../resources/images/sotware sol.png" alt=""> -->
+                    <div class="imagery">
+                        <div class="arrows">
+                            <a href="#"><img  class="icon" id="rotate" src="images/icons8-arrow-64.png" alt=""></a>
+                                <h1 class="call-to-action">The Digital World Simplified <span id="flick" style="display: 'none';">_</span></h1>
+                            <a  href="#"><img class="icon" id="foward" src="images/icons8-arrow-64.png" alt=""></a>
+                        </div>  
+                    </div>
+                </div>
+                <div class="side-div">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li class="border-bottom"><a href="#"  >Software Solutions</a></li>
+                        <li class="border-bottom"><a href="#" >Harware Diagnosis</a></li>
+                        <li><a href="#" >Hardware Repair</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        </main>
+        <section id="available-parts">
+            <div class="store-heading">
+                <h2>Check what we currently have in store</h2>
+            </div>
+            <div class="main-items">
+               
+                <% if(results.length > 0) {%>
+                    <% results.forEach( result => {%>
+                        <form class="primary-card" id="<%=result.item_id%>" method="post" action="/detailed-item">
+                            <div class="card-image">
+                                <!-- ONLY USED TO POST ID INTO THE BACKEND, NOT FOR FRONT END PURPOSES -->
+                                <input style="display: none;" type="text" name="id" id="" value="<%=result.item_id%>">
+                            </div>
+                            <div class="card-description">
+                                <h3 id="name<%=result.item_id%>"><%=result.item_name%></h3>
+                                <p id="description<%=result.item_id%>"><%=result.item_description%></p>
+                                <p id="price<%=result.item_id%>">R<%=result.item_price%>.00</p>
+                                <button   class="btn-secondary" type="submit">Purchase</button>
+                            </div>
+                        </form>
+                    <%})%>
+                  <%}%>
+
+            </div>
+
+        </section>
+
+           
+    </div>
+
+
+</body>
+
+<script src="main.js"></script>
+</html>
