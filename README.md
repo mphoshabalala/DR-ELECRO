@@ -4,7 +4,7 @@
 
 ## Description
 
-DR. ELECRO is an E-commerce web application that is tailored to provide assistance with electronics related issues, including purchase of hardware, software services and disgnostics
+DR. ELECRO is an E-commerce web application that is tailored to provide assistance with electronics related issues, including purchase of hardware, software services and disgnostics, it uses an EJS templating.
 
 ### Features
 
@@ -25,7 +25,8 @@ DR. ELECRO is an E-commerce web application that is tailored to provide assistan
 - Vanilla JS(ES6)
 - HTML 5,
 - CSS3
-- mySQL Database 
+- mySQL Database
+- EJS templating
 
 ## Installation Of This Project
 
